@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1218px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #07CBAE;
+}
+
+.header__body {
+  padding: 0 10px;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo__name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 54px;
+  color: #FFFFFF;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.nav__item:hover {
+  opacity: 0.7;
+}
+
+.nav__item:last-child {
+  margin-left: 30px;
+}
+
+.search__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 50px;
+  max-width: 60%;
+}
+
+@media (max-width: 500px) {
+  .search__body {
+    max-width: 80%;
+  }
+}
+
+.search__input {
+  width: 100%;
+}
+
+.search__btn {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  background: #467FCE;
+  border-radius: 0px 4px 4px 0px;
+  border: none;
+  width: 100px;
+  height: 47px;
+}
+
+.input__search {
+  width: 100%;
+  height: 47px;
+  padding: 0;
+  background: #FFFFFF;
+  border: 1px solid #B4B4B4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 16px;
+}
+
+.products__body {
+  margin-bottom: 50px;
+}
+
+.products__load {
+  font-size: 30px;
+  text-align: center;
+}
+
+.products__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 31%;
+          flex: 0 1 31%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 818px) {
+  .products__item {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .products__item {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
+.item {
+  padding: 0 25px 30px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.item__img {
+  margin-top: 25px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+  margin-right: 20px;
+}
+
+.item__picture {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.item__info {
+  margin-top: 25px;
+  overflow: hidden;
+  max-width: 205px;
+}
+
+@media (max-width: 818px) {
+  .item__info {
+    max-width: 80%;
+  }
+}
+
+.item__name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2E2E2E;
+  margin-bottom: 8px;
+}
+
+.item__descr {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #636363;
+}
+
+.item__star svg {
+  margin-top: 20px;
+}
+
+.item__star svg:hover {
+  fill: yellow;
+  stroke: yellow;
+}
+
+.item__delete {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.selected {
+  stroke: yellow;
+}
+
+.empty {
+  display: none;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.visited {
+  opacity: 0.7;
+}
+/*# sourceMappingURL=style.css.map */

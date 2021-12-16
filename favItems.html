@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="2.png" type="image/x-icon">
+    <title>Favorite items</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <div class="header__logo logo">
+                    <a class="logo__name" href="index.html">Beans Love Beers</a>
+                </div>
+                <div class="heaver__nav nav">
+                    <a class="nav__item" href="index.html">Home</a>
+                    <a class="nav__item" href="favItems.html">Favorites</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <template>
+        <li class="products__item item">
+            <div class="item__img">
+                <img class="item__picture" alt="item_ picture">
+            </div>
+            <div class="item__info">
+                <div class="item__name"></div>
+                <div class="item__descr"></div>
+            </div>
+            <div class="item__delete">
+                X
+            </div>
+        </li>
+    </template>
+
+    <div class="products">
+        <div class="container">
+            <div class="products__body">
+                <div class="empty">You have not chosen any items</div>
+                <ul class="products__list selectedItems" ></ul>
+            </div>
+        </div>
+    </div>
+    <script defer src="favorites.js"></script>
+    <script defer src="favList.js"></script>   
+</body>
+</html>
+
+

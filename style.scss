@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+li,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1218px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #07CBAE;
+
+    &__body {
+        padding: 0 10px;
+        height: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    &__logo {
+    }
+
+    &__nav {
+    }
+}
+
+.logo {
+
+    &__name {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 54px;
+        color: #FFFFFF;
+    }
+}
+
+.nav {
+    display: flex;
+
+    &__item {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.7;
+        }
+        &:last-child {
+            margin-left: 30px;
+        }
+    }
+}
+.search {
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 50px;
+        max-width: 60%;
+        @media (max-width: 500px) {
+            max-width: 80%;
+        }
+    }
+
+    &__input {
+        width: 100%;
+
+    }
+
+    &__button {
+        
+    }
+
+    &__btn {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+        background: #467FCE;
+        border-radius: 0px 4px 4px 0px;
+        border: none;
+        width: 100px;
+        height: 47px;
+    }
+}
+.input {
+
+    &__search {
+        width: 100%;
+        // width: 484px;
+        height: 47px;
+        padding: 0;
+        background: #FFFFFF;
+        border: 1px solid #B4B4B4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding-left: 16px;
+    }
+}
+.products {
+
+    &__body {
+        margin-bottom: 50px;
+    }
+
+    &__load {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        justify-content: center; 
+    }
+
+    &__item {
+        display: flex;
+        flex: 0 1 31%;
+        // border: 10px solid #B4B4B4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        @media (max-width: 818px) {
+            max-width: 80%;
+        }
+        @media (max-width: 1050px) {
+            flex-basis: 40%;
+        }
+    }
+}
+.item {
+    padding: 0 25px 30px;
+    height: 240px;
+    overflow: hidden;
+
+    &__img {
+        margin-top: 25px;
+        flex: 1 0 33%;
+        margin-right: 20px;
+    }
+
+    &__picture {
+        display: block;
+        height: 100%;
+        // width: 100%;
+        margin: 0 auto;
+    }
+
+    &__info {
+        margin-top: 25px;
+        overflow: hidden;
+        // width: %;
+        max-width: 205px;
+        @media (max-width: 818px) {
+            max-width: 80%;
+        }
+    }
+
+    &__name {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #2E2E2E;
+        margin-bottom: 8px;
+    }
+
+    &__descr {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #636363;
+    }
+
+    &__star svg{
+        margin-top: 20px;
+    }
+
+    &__star svg:hover {
+        fill: yellow;
+        stroke: yellow;
+    }
+
+    &__delete {
+        align-self: start;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 20px;
+        // outline: 1px solid red;
+        
+    }
+
+    &__delete-text {}
+}
+
+.hide {
+    display: none;
+}
+
+.selected {
+    stroke: yellow;
+}
+
+.empty {
+    display: none;
+    font-size: 40px;
+    // font-style: bold; 
+    font-weight: bold;   
+    text-align: center;
+}
+
+.visited {
+    opacity: 0.7;
+}
+
