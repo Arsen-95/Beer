@@ -1,5 +1,5 @@
 const selectedItems = document.querySelector('.selectedItems');
-const url = 'https://api.punkapi.com/v2/beers';
+let url = 'https://api.punkapi.com/v2/beers?ids=';
 const temp = document.querySelector('template');
 const emptyEl = document.querySelector('.empty');
 const prodBody = document.querySelector('.products__body');
@@ -17,18 +17,20 @@ let favListRender = () => {
     if (localStorage.getItem('favoriteStorage')) {
         let favIds = localStorage.getItem('favoriteStorage').split(',');
         favIds.forEach(id => {
-            sendRequest(`${url}?ids=${id}`, 'GET').then(data => {
-                data.forEach(el => {
-                    const listEl = document.importNode(temp.content, true);
-                    const elementOfList = listEl.querySelector('.item');
-                    elementOfList.id = el.id;
-                    listEl.querySelector('.item__picture').src = el.image_url;
-                    listEl.querySelector('.item__name').textContent = el.name;
-                    listEl.querySelector('.item__descr').textContent = el.description.slice(0, 120) + '...';
-                    selectedItems.append(listEl);
-                    // favIdsArr.push(el.id);
-                    // console.log(favIdsArr);
-                });
+            url += `|${id}`;
+        });
+        console.log(url);
+        sendRequest(url, 'GET').then(data => {
+            data.forEach(el => {
+                const listEl = document.importNode(temp.content, true);
+                const elementOfList = listEl.querySelector('.item');
+                elementOfList.id = el.id;
+                listEl.querySelector('.item__picture').src = el.image_url;
+                listEl.querySelector('.item__name').textContent = el.name;
+                listEl.querySelector('.item__descr').textContent = el.description.slice(0, 120) + '...';
+                selectedItems.append(listEl);
+                // favIdsArr.push(el.id);
+                // console.log(favIdsArr);
             });
         });
         emptyEl.textContent = 'Your favorites';
