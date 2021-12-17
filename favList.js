@@ -2,6 +2,7 @@ const selectedItems = document.querySelector('.selectedItems');
 const url = 'https://api.punkapi.com/v2/beers';
 const temp = document.querySelector('template');
 const emptyEl = document.querySelector('.empty');
+const prodBody = document.querySelector('.products__body');
 let favIdsArr = [];
 
 async function sendRequest(url, method) {
@@ -30,9 +31,7 @@ let favListRender = () => {
                 });
             });
         });
-        
-    } else {
-        emptyEl.style.display = 'block';
+        emptyEl.textContent = 'Your favorites';
     }
 };
 
@@ -52,6 +51,10 @@ favList.addEventListener('click', e => {
         console.log(arr);
         localStorage.setItem('favoriteStorage', arr);
         favList.removeChild(liEl);
+        if (!localStorage.getItem('favoriteStorage')) {
+            emptyEl.textContent = 'You have not chosen any items';
+        }
     }
     
 });
+
